@@ -1,41 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--makes the project rewsponsive-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yoezer Portfolio</title>
-  <link rel="stylesheet" href="styles.css"> <!--connects to css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"><!--for icons-->
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    /* === Responsive Enhancements & Dark Mode Styling === */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #222;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    /* 🌙 Dark Mode */
+    body.dark-mode {
+      background-color: #111;
+      color: #f5f5f5;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0077cc;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 20px;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0077cc;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      text-align: center;
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h2, h3 {
+      color: #0077cc;
+    }
+
+    .icons i {
+      font-size: 2rem;
+      margin: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0077cc;
+      color: white;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* 🌙 Dark Mode Adjustments */
+    body.dark-mode footer {
+      background-color: #222;
+      color: #f5f5f5;
+    }
+
+    /* 🌙 Dark Mode Toggle Button */
+    #darkToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    #darkToggle:hover {
+      background-color: #005fa3;
+    }
+
+    /* === Responsive Design === */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero-text {
+        font-size: 0.95rem;
+      }
+      section {
+        margin: 20px auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- 🌙 Dark Mode Toggle -->
+  <button id="darkToggle" title="Toggle Dark Mode">🌙</button>
+
   <header class="header">
     <nav>
       <ul class="nav-links">
-        <li><a href="#about">About me</a></li><!--navigation menu-->
+        <li><a href="#about">About Me</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Get in touch</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
       </ul>
     </nav>
 
-    <div class="hero"><!--presents of img with text-->
+    <div class="hero">
       <img src="p.jpg" alt="Profile" class="profile-img">
       <div class="hero-text">
-        <p>I love design and anything related to art. I approach problems in a rational and pragmatic way and seek the simplest and most functional solutions possible.</p>
+        <p>
+          I love design and anything related to art. I approach problems in a rational and pragmatic way and seek the simplest and most functional solutions possible.
+        </p>
       </div>
     </div>
 
     <div class="profile-frame">
-      <img src="p1.jpg" alt="Yoezer Photo" class="profile-frame-img"><!--smaller image and styled to be on frame-->
+      <img src="p1.jpg" alt="Yoezer Photo" class="profile-frame-img">
     </div>
   </header>
 
-  <section id="About" class="about">
-    <h2>HELLO, I'm Yoezer!</h2>
+  <section id="about" class="about">
+    <h2>Hello, I'm Yoezer!</h2>
     <p>
-      I am a 1st year software student in College of Science and Technology and a UI/UX Designer.
-      I enjoy designing because it's like solving problems with creativity and ideas. I love coding, Figma, and UI/UX design.
-      It's not just about creating great looks but making products feel right and enjoyable to use.
+      I am a 1st-year Software Engineering student at the College of Science and Technology and a passionate UI/UX Designer.
+      I enjoy designing because it’s about solving problems creatively and making products feel intuitive and enjoyable to use.
     </p>
   </section>
 
@@ -44,31 +191,28 @@
     <ul>
       <li><strong>Zhilukha Middle Secondary School</strong></li>
       <li><strong>Motithang Higher Secondary School</strong></li>
-    </ul><!--strong here emphasuzes on schools-->
+    </ul>
   </section>
 
-  <section class ="language">
-      <h3>Languages</h3>
-      <div class = "languages">
-      <ul>
-        <li>Dzongkha</li>
-        <li>English</li><!--using listing -->
-        <li>Korean</li>
-      </ul>
-    </div>
-   </section>
-   <section class ="hobbies">
-    
-      <h3>Hobbies</h3>
-       <div class="hobbies">
-      <p>Drawing    Reading   Music   Sports</p>
-    </div>
-    </section>
-   <section class="skills">
+  <section class="language">
+    <h3>Languages</h3>
+    <ul>
+      <li>Dzongkha</li>
+      <li>English</li>
+      <li>Korean</li>
+    </ul>
+  </section>
+
+  <section class="hobbies">
+    <h3>Hobbies</h3>
+    <p>Drawing • Reading • Music • Sports</p>
+  </section>
+
+  <section class="skills">
     <div class="software">
       <h3>Software</h3>
       <div class="icons">
-        <i class="fa-brands fa-figma"></i><!--fa stands for font awasome mainly for icons-->
+        <i class="fa-brands fa-figma"></i>
         <i class="fa-brands fa-adobe"></i>
         <i class="fa-brands fa-git-alt"></i>
         <i class="fa-brands fa-js-square"></i>
@@ -94,6 +238,14 @@
     </div>
   </footer>
 
-  <script src="script.js"></script><!--use of java script to make it interactive-->
+  <script>
+    // 🌙 Dark Mode Toggle Functionality
+    const toggleBtn = document.getElementById("darkToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>
+
